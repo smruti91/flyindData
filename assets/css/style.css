@@ -67,12 +67,25 @@ section {
   font-weight: 700;
   color: #012970;
 }
-
+.hero-logo img{
+  width: 70%;
+  position: absolute;
+  top: -45px;
+}
 @media (max-width: 768px) {
   .section-header p {
     font-size: 28px;
     line-height: 32px;
   }
+}
+/*--------------------------------------------------------------
+# for mobile device
+--------------------------------------------------------------*/
+@media screen and (max-width: 600px) {
+  .hero-logo img{
+    position: inherit;
+  }
+  
 }
 
 /*--------------------------------------------------------------
@@ -185,11 +198,14 @@ section {
 
 .header .logo {
   line-height: 0;
+  position: relative;
 }
 
 .header .logo img {
   max-height: 100px;
   margin-right: 6px;
+  width: 50%;
+  position: absolute;
 }
 
 .header .logo span {
@@ -199,6 +215,14 @@ section {
   color: #012970;
   font-family: "Nunito", sans-serif;
   margin-top: 3px;
+}
+
+.why-us{
+  background-image: url('../img/bolb.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*--------------------------------------------------------------
@@ -1615,30 +1639,43 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-box {
-  color: #444444;
-  background: #fafbff;
+.contact .info {
+  border-top: 3px solid #16df7e;
+  border-bottom: 3px solid #16df7e;
   padding: 30px;
+  width: 100%;
+  background-color: #f9f9fa;
 }
 
-.contact .info-box i {
-  font-size: 38px;
-  line-height: 0;
-  color: #4154f1;
-}
-
-.contact .info-box h3 {
+.contact .info i {
   font-size: 20px;
-  color: #012970;
-  font-weight: 700;
-  margin: 20px 0 10px 0;
+  color: #16df7e;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
 }
-
-.contact .info-box p {
-  padding: 0;
-  line-height: 24px;
+.contact .info .address:hover i, .contact .info .phone:hover i, .contact .info .email:hover i {
+  background: #16df7e;
+  color: #fff;
+}
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
   font-size: 14px;
-  margin-bottom: 0;
+  color: #949cac;
+}
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #5f687b;
 }
 
 .contact .php-email-form {
